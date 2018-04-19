@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="MutuallyExclusiveToggle.Controls.CustomToggleButtonGroup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MutuallyExclusiveToggle.Controls">
+    <StackPanel Orientation="Horizontal">
+        <ToggleButton x:Name="ScreenToggle"
+                      MinWidth="70"
+                      Content="Screens"
+                      Checked="ScreenToggle_Checked"
+                      IsChecked="{Binding IdentifyScreensActive, Mode=TwoWay}" />
+        <ToggleButton x:Name="OutputToggle"
+                      MinWidth="70"
+                      Content="Outputs"
+                      Checked="OutputToggle_Checked"
+                      IsChecked="{Binding IdentifyOutputsActive, Mode=TwoWay}" />
+    </StackPanel>
+</UserControl>
